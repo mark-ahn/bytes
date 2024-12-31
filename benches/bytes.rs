@@ -65,7 +65,7 @@ fn clone_shared(b: &mut Bencher) {
 
 #[bench]
 fn clone_arc_vec(b: &mut Bencher) {
-    use std::sync::Arc;
+    use asyncs::sync::Arc;
     let bytes = Arc::new(b"hello world 1234567890 and have a good byte 0987654321".to_vec());
 
     b.iter(|| {

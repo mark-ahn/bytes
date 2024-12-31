@@ -1,8 +1,10 @@
 #![warn(rust_2018_idioms)]
 
 use bytes::{Buf, BufMut, Bytes, BytesMut};
-use std::sync::atomic::{AtomicUsize, Ordering};
-use std::sync::Arc;
+// use std::sync::atomic::{AtomicUsize, Ordering};
+use rss::sync::atomic::{AtomicUsize, Ordering};
+// use std::sync::Arc;
+use asyncs::sync::Arc;
 
 use std::panic::{self, AssertUnwindSafe};
 use std::usize;

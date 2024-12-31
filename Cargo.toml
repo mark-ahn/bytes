@@ -4,7 +4,7 @@ name = "bytes"
 # When releasing to crates.io:
 # - Update CHANGELOG.md.
 # - Create "v1.x.y" git tag.
-version = "1.9.0"
+version = "1.9.1-p1"
 edition = "2018"
 rust-version = "1.39"
 license = "MIT"
@@ -23,7 +23,13 @@ default = ["std"]
 std = []
 
 [dependencies]
-serde = { version = "1.0.60", optional = true, default-features = false, features = ["alloc"] }
+rss = { git = "https://github.com/mark-ahn/rss", version = "0.4.5", default-features = false }
+asyncs = { git = "https://github.com/mark-ahn/asyncs", version = "0.2.10", default-features = false, features = [
+    "alloc",
+] }
+serde = { version = "1.0.60", optional = true, default-features = false, features = [
+    "alloc",
+] }
 
 [dev-dependencies]
 serde_test = "1.0"
